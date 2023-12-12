@@ -15,11 +15,13 @@ import java.util.List;
 public class TaskServiceImpl implements TaskService {
     private final TaskRepository taskRepository;
     private final CommentRepository commentRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    public TaskServiceImpl(TaskRepository taskRepository, CommentRepository commentRepository) {
+    public TaskServiceImpl(TaskRepository taskRepository, CommentRepository commentRepository, UserRepository userRepository) {
         this.taskRepository = taskRepository;
         this.commentRepository = commentRepository;
+        this.userRepository = userRepository;
     }
 
     @Override

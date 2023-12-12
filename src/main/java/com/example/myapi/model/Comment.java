@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import com.example.myapi.model.*;
 import com.example.myapi.*;
 
+@Entity
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,10 @@ public class Comment {
         this.text = text;
         this.task = task;
         this.author = author;
+    }
+
+    public Comment() {
+
     }
 
     public Task getTask() {
